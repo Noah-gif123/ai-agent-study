@@ -1,0 +1,11 @@
+2026-09-14 14:50:23,558 - core.agent - INFO - agent.py:32 - 🚀 Agent 启动
+2026-09-14 14:50:30,834 - core.agent - INFO - agent.py:48 - 本轮 Token：22 | 累计：22
+2026-09-14 14:50:30,834 - core.llm_client - INFO - llm_client.py:25 - 🔄 第 1/3 次调用 LLM
+2026-09-14 14:50:41,527 - core.agent - INFO - agent.py:48 - 本轮 Token：53 | 累计：75
+2026-09-14 14:50:41,527 - core.llm_client - INFO - llm_client.py:25 - 🔄 第 1/3 次调用 LLM
+2026-09-14 14:50:50,280 - core.agent - INFO - agent.py:48 - 本轮 Token：75 | 累计：150
+2026-09-14 14:50:50,280 - core.llm_client - INFO - llm_client.py:25 - 🔄 第 1/3 次调用 LLM
+2026-09-14 14:50:51,201 - utils.json_cleaner - ERROR - json_cleaner.py:61 - 所有清洗策略失败：你好！有什么可以帮你的吗？😊...
+2026-09-14 14:51:06,916 - core.agent - INFO - agent.py:48 - 本轮 Token：119 | 累计：269
+2026-09-14 14:51:06,916 - core.llm_client - INFO - llm_client.py:25 - 🔄 第 1/3 次调用 LLM
+2026-09-14 14:51:12,359 - core.agent - INFO - agent.py:75 - 🏁 会话结束
