@@ -1,0 +1,25 @@
+# ===== 密钥与环境变量 =====
+.env
+*.env
+!.env.example
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.so
+venv/
+.venv/
+*.egg-info/
+build/
+dist/
+
+# ===== 运行产物 =====
+logs/
+output/
+*.log
+
+# ===== 编辑器与系统 =====
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
