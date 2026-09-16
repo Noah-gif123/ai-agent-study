@@ -1,0 +1,27 @@
+# ============================================================
+# 阶段二 · M1~M4：数据资产 / 检索链路 / 生成链路
+# 安装：  .\setup.ps1 -Stage core
+# 体积：  约 1GB（其中 torch CPU 版约 250MB）
+# ============================================================
+#
+# 注意：Windows + PyPI 上默认装到的是 CPU 版 torch（torch x.x.x+cpu）。
+# 本阶段先用 CPU 跑通全链路即可，等 M5 再做 CUDA 升级：
+#     .\setup.ps1 -Stage cuda
+torch
+
+# 多语言 Embedding 与重排序（本项目核心：中文提问 → 日文语料）
+sentence-transformers          # 加载 BAAI/bge-m3、BAAI/bge-reranker-v2-m3
+
+# 向量检索
+faiss-cpu
+
+# 基础
+numpy
+tqdm
+python-dotenv
+tiktoken
+requests
+pydantic
+
+# LLM 调用（DeepSeek / 百炼均兼容 OpenAI 协议）
+openai

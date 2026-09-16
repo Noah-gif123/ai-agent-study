@@ -1,0 +1,25 @@
+# ============================================================
+# 阶段二 · V1：LangChain 重构
+# 安装：  .\setup.ps1 -Stage langchain
+# 体积：  约 200MB
+# ============================================================
+#
+# 刻意【不装】langchain-community。
+# 实测：在 LangChain 1.x 线上，langchain-community 最新版仍是 1.0.0a1（alpha），
+# 而 FAISS / BM25Retriever / HuggingFaceEmbeddings / EnsembleRetriever
+# 大半都在这个包里。
+#
+# 按规划书 2.3「决策三」：V1 的检索层保持自研，只让框架负责编排与状态管理。
+#   - Embedding  → langchain-huggingface（官方 partner 包，稳定线）
+#   - 向量检索   → 复用 V0 已手写的 FAISS 封装
+#   - 混合检索   → 自己写 RRF 融合（约 15 行），权重用评测数据选
+#   - 对话记忆   → langgraph.checkpoint，不用已移除的 ConversationBufferMemory
+langchain
+langgraph
+langchain-huggingface
+langchain-openai
+
+# 日语分词（混合检索的前提：日语没有空格，朴素 BM25 会失效）
+rank-bm25
+fugashi
+unidic-lite
